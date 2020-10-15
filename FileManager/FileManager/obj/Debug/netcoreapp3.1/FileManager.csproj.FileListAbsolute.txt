@@ -1,0 +1,13 @@
+F:\VS projects\FileManager\FileManager\bin\Debug\netcoreapp3.1\FileManager.exe
+F:\VS projects\FileManager\FileManager\bin\Debug\netcoreapp3.1\FileManager.deps.json
+F:\VS projects\FileManager\FileManager\bin\Debug\netcoreapp3.1\FileManager.runtimeconfig.json
+F:\VS projects\FileManager\FileManager\bin\Debug\netcoreapp3.1\FileManager.runtimeconfig.dev.json
+F:\VS projects\FileManager\FileManager\bin\Debug\netcoreapp3.1\FileManager.dll
+F:\VS projects\FileManager\FileManager\bin\Debug\netcoreapp3.1\FileManager.pdb
+F:\VS projects\FileManager\FileManager\obj\Debug\netcoreapp3.1\FileManager.csprojAssemblyReference.cache
+F:\VS projects\FileManager\FileManager\obj\Debug\netcoreapp3.1\FileManager.AssemblyInfoInputs.cache
+F:\VS projects\FileManager\FileManager\obj\Debug\netcoreapp3.1\FileManager.AssemblyInfo.cs
+F:\VS projects\FileManager\FileManager\obj\Debug\netcoreapp3.1\FileManager.csproj.CoreCompileInputs.cache
+F:\VS projects\FileManager\FileManager\obj\Debug\netcoreapp3.1\FileManager.dll
+F:\VS projects\FileManager\FileManager\obj\Debug\netcoreapp3.1\FileManager.pdb
+F:\VS projects\FileManager\FileManager\obj\Debug\netcoreapp3.1\FileManager.genruntimeconfig.cache
