@@ -3,6 +3,8 @@ using System.IO;
 //using System.Windows;
 partial class Program
 {
+    private static string currPath = Directory.GetCurrentDirectory();
+
     /// <summary>
     /// Функция для вывода стартового меню в консоль.
     /// </summary>
@@ -48,20 +50,28 @@ partial class Program
     /// </summary>
     private static void WriteAllDrives()
     {
-        DriveInfo[] drives = DriveInfo.GetDrives();
-        Console.WriteLine("Доступные диски:");
-        for (int i = 0; i < drives.Length; i++)
+        try
         {
-            Console.WriteLine($"{i+1}) {drives[i].Name}");
+            DriveInfo[] drives = DriveInfo.GetDrives();
+            Console.WriteLine("Available drives:");
+            for (int i = 0; i < drives.Length; i++)
+            {
+                Console.WriteLine($"{i + 1}) {drives[i].Name}");
+            }
+            Console.Write("Choose available drive, number from 1 to {0}:", drives.Length);
+            ReadOrExit(out string input);
+            CheckCorrectIntInput(input, 1, drives.Length, out int intInput);
+            currPath = Path.GetFullPath(drives[intInput-1].Name);
         }
-        Console.WriteLine("Введите число, соответствующее нужному вам диску.");
-
+        catch
+        {
+            Console.WriteLine("Drive acsess error!");
+        }
     }
 
     private static void DirInformation()
     {
-        ReadOrExit(out string path);
-        DirectoryInfo currentDir = new DirectoryInfo(path);
+        DirectoryInfo currentDir = new DirectoryInfo(currPath);
         FileSystemInfo[] infos = currentDir.GetFileSystemInfos();
         foreach (FileSystemInfo file in infos)
         {
@@ -79,10 +89,12 @@ partial class Program
             Environment.Exit(0);
         }
     }
-    private static void MoveFile()
+    private static void MoveFile(string[] input)
     {
-        Console.WriteLine("Введите путь к нужному файлу.");
-        ReadOrExit(out string path); 
+        if(input.Length !=3)
+        {
+
+        } 
         while(!File.Exists(path))
         {
             Console.WriteLine("Введите корректный путь к файлу!");
@@ -90,8 +102,6 @@ partial class Program
         }
         FileInfo fileToMove = new FileInfo(path);
         Console.WriteLine(fileToMove.Name);
-        //как блять ввести правильный путь кисленько нахуй ненавижу прогу
-        // ну да меня же унизили на контесте
         Console.WriteLine("Введите путь к директории, куда вы хотите переместить файл.");
         ReadOrExit(out string pathToMove);
         while (!File.Exists(pathToMove))
@@ -101,8 +111,29 @@ partial class Program
         }
         pathToMove += @"\" + fileToMove.Name;
         File.Move(path, pathToMove);
-        // ну если честно то проверяющим поебать :/
-        // как нормально двигать файл
+    }
 
+    private static void CommandQuery(string userInput)
+    {
+        string[] input = userInput.Split();
+        switch(input[0])
+        {
+            case "help":
+                HelpText();
+                break;
+            case "driveslist":
+                WriteAllDrives();
+                Console.WriteLine(currPath);
+                break;
+            case "showfiles":
+                DirInformation();
+                break;
+            case "movefile":
+                MoveFile(input);
+                break;
+            default:
+                Console.WriteLine("File manager: command not found.");
+                break;
+        }
     }
 }
