@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KBskETElgQLKuRf/fIfORFd2BUqRKvR7TgfvHV7t/TXNkhoZjXwkZAx3D5UttJac2tStU9V6+ccvPqdpMLusSQ==",
+  "dgSpecHash": "CHVkxpq1fk1RHT/BrrDVBUAlfMxcq2BpVjbJNWyNEgbDF1DFD007YEPBJK/cTYICZuGgxmoj0LUj0pOVyw4bTQ==",
   "success": true,
-  "projectFilePath": "F:\\VS projects\\FileManager\\FileManager\\FileManager.csproj",
+  "projectFilePath": "/Users/ernest_kot/Projects/FileManager/FileManager/FileManager.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
