@@ -2,19 +2,19 @@
 List of available commands:
 			
  help					Shows list of available commands.
- driveslist				Shows available drives and chooses the drive.
+ choosedrive				Shows available drives and chooses the drive.
  showfiles				Shows available files in current directory.
- copyfile 'filename'			Copies chosen file in current working directory if possible.
- pastefile 'filename'			Pastes the copied file in the current working directory if possible.
- deletefile 'filename'			Deletes chosen file current working directory if possible.
- movefile 'filename' 'movepath'		Moves chosen file current working directory to selected directory path.
- chdir 'dirname'			Changes the current working directory.
+ copyfile				Choose the file from current working directory, then moves it to the written directory if possible.!
+ deletefile 				Choose the file from current working directory and then delete it if possible.
+ movefile 	 			Choose the file from current working directory, then moves it to the written directory if possible.
+ chdir 					Changes the current working directory.
  back					Moves to the previous directory.
- maketxtfile 'filename'			Makes a txt. file in the current working directory, then writes the user input into file with the chosen encoding.
- readtxtfile 'filename'			Writes txt file's content with the chosen encoding in console if possible.
+ maketxtfile 				Makes a .txt file in the current working directory, then writes the user input into file with the chosen encoding.
+ readtxtfile 				Writes .txt file's content with the chosen encoding in console if possible.
  currpath				Shows current working directory path.
- jumpto 'path'				Switches current working directory to written path if possible.
+ jumpto 				Switches current working directory to written path if possible.
  exit					Ends the program.
+ concatenate				
 
  Words written in '' are variables in commands.
 
